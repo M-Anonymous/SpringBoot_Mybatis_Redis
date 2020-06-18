@@ -1,0 +1,20 @@
+a:link,visited,hover,active
+{
+	text-decoration: none;
+}
+.navbar-nav > li > a
+{
+    padding-top: 8px; 
+    padding-bottom: 0;
+    height: 36px;
+}
+.navbar 
+{
+	min-height: 28px;
+}
+#suit
+{
+	padding-top: 4px;
+	padding-bottom: 0;
+    height: 36px;
+}

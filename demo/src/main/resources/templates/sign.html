@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/sign.ico" /> <!--浏览器地址图标-->
+    <link type="text/css" rel="styleSheet"  href="/css/sign.css" />
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/sign.js"></script>
+    <title>注册丨登录</title>
+</head>
+
+<body onload="load()">
+    <div id="bg">
+    	<div id="hint"><!-- 提示框 -->
+            <p></p>
+        </div>
+        <div id="sign_wrap">
+            <div id="sign_animation"><!-- 登录注册切换动画 -->
+                <div id="status">
+                    <i>Sign</i>
+                    <i style="top: 0px;left: 60px">in</i>
+                    <i style="top: 35px;left: 60px">up</i>
+                </div>
+                <span>
+                    <form method="post" id="sign">
+                        <p class="form"><input type="text" name="username" id="username" placeholder="username"></p>
+                        <p class="form"><input type="password" name="password" id="password" placeholder="password"></p>
+                        <div id="sign_div">
+                            <p class="form"><input type="password" name="confirm_pwd" id="confirm_pwd" 
+                                placeholder="confirm password"></p>
+                            <p class="form"><input type="text" name="phone" id="phone"
+                                placeholder="phone"></p>
+                            <input class="code" type="text" name="verifycode" id="verifycode" 
+                            placeholder="verifycode">
+                            <input class="code" id="getcode" type="button" value="Get Code" name="verifycode" onclick="sendcode()">
+                        </div>
+                        <input type="button" value="Sign in" class="btn" onclick="signin()" style="margin-right: 20px;">
+                        <input type="button" value="Sign up" class="btn" onclick="signup()" id="btn">
+                    </form>
+                    <a href="#">Forget your password?</a>
+                </span>
+            </div>
+
+            <div id="sign_img"><!-- 图片绘制框 -->
+                <span class="circle">
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="star">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="fly_star">
+                    <span></span>
+                    <span></span>
+                </span>
+                <p id="title">CLOUD</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

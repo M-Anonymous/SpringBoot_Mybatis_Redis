@@ -30,7 +30,7 @@ public class SimpleUserServiceImpl implements UserDetailsService {
 		}else {
 			SimpleUser user = userDao.findUserByUsername(username);
 			if(user != null) {
-				redisTemplate.opsForHash().put("user", "username", user);
+				redisTemplate.opsForHash().put("user", username, user);
 				return new User(user.getUsername(),user.getPassword(),user.getAuthorities());
 			}else {
 				throw new UsernameNotFoundException("Username or Password is not correct");
